@@ -6,25 +6,29 @@ var randomGradientButton = document.querySelector("#randomGenerate");
 
 
 function randNumGen () {
-	randomNumber = Math.floor(Math.random() * 255); //returns a random integer between 0 to 255
+	var	randomNumber = Math.floor(Math.random() * 255); //returns a random integer between 0 to 255
 	return randomNumber;
 }
 
 function randomRgbGenerate(a,b,c) {
-	randRGB = "rgb("+a+ ","+b+","+c+")";		
+	var randRGB = "rgb("+a+ ","+b+","+c+")";
+	return randRGB;		
 }
-
-function setRandomGradient() {
-
-}
-
 
 function setGradient() {
 	//background: linear-gradient(to right, #780206 , #061161); css format for gradient
 	body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 	cssText.textContent = body.style.background + ";";
 }
+
+function setRandomGradient() {
+	color1.value = randomRgbGenerate(randNumGen(),randNumGen(),randNumGen());
+	color2.value = randomRgbGenerate(randNumGen(),randNumGen(),randNumGen());
+	console.log()
+	setGradient();
+}
+
 setGradient();
 color1.addEventListener("input", setGradient);// event listener for input
 color2.addEventListener("input", setGradient);
-randomGradientButton.addEventListener("input", setRandomGradient);
+randomGradientButton.addEventListener("click", setRandomGradient);

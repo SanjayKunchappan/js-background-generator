@@ -7,7 +7,8 @@ body {
 	font: 300 1em 'Roboto', sans-serif;
     color: #bbd0ff;
     text-align: center;
-	background: linear-gradient(to right, #780206 , #061161); /* Standard syntax */
+ /* background: linear-gradient(to right, #780206 , #061161); /* Standard syntax */
+    
 }
 
 header {
@@ -42,4 +43,14 @@ h3 {
     text-transform: none;
     letter-spacing: 0.01em;
 
+}
+
+#randomGenerate {
+    font: 300 1em 'Roboto', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: #000;
+    background-color: #bbd0ff;
+    margin-top: 20px;
 }
